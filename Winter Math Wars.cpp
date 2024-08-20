@@ -33,6 +33,9 @@ int main()
     View view(sf::FloatRect(0, 0, 1920, 1080));
     window.setView(view);
 
+    // Tracking whether the game is running
+    bool paused = true;
+
     /*
     * Background
     */
@@ -167,6 +170,16 @@ int main()
         if (Keyboard::isKeyPressed(Keyboard::Escape))
         {
             window.close();
+        }
+
+        // Starting the game
+        if (Keyboard::isKeyPressed(Keyboard::Return))
+        {
+            // Setup code for pause score and time later
+            paused = false;
+
+            //Making Snowballs
+
         }
 
 
